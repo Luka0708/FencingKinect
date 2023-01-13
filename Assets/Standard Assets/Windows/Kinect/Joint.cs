@@ -21,7 +21,7 @@ namespace Windows.Kinect
         public override bool Equals(object obj)
         {
             if (!(obj is Joint))
-            {
+            {   
                 return false;
             }
 
