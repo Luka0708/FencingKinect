@@ -217,6 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BoneMaterial: {fileID: 0}
+  ragdoll: {fileID: 0}
   BodySourceManager: {fileID: 0}
 --- !u!114 &283658057
 MonoBehaviour:
