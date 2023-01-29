@@ -8,14 +8,12 @@ public class SphereController : MonoBehaviour
     public float speed = 5f;
     public Transform target;
     //public Image fillImage;
-    public Sprite fillImage;
-    private SpriteRenderer _spriteRenderer;
+    public Slider Slider;
     private bool isHovering;
     private float fillAmount;
-
     private void Start()
     {
-        _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        
 
     }
 
@@ -43,20 +41,20 @@ public class SphereController : MonoBehaviour
         // Update the fill image
         if (isHovering)
         {
-            _spriteRenderer.sprite = fillImage;
-            fillAmount += Time.deltaTime / 2;
-            fillImage.fillAmount = fillAmount;
+            Slider.value += Time.deltaTime / 2;
 
-            if (fillAmount >= 1)
+            if (Slider.value >= 1f)
             {
-                SceneManager.LoadScene("MainGame");
+                Debug.Log("fill is one");
+                //SceneManager.LoadScene("MainGame");
+                SceneManager.LoadScene(1);
             }
         }
         else
         {
-            _spriteRenderer.sprite = fillImage;
-            fillAmount = 0;
-            fillImage.fillAmount = fillAmount;
+            Slider.value = 0;
         }
     }
 }
+
+
